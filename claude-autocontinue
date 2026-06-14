@@ -78,7 +78,7 @@ is_claude_code() {
 has_rate_limit_banner() {
     local tail_content="$1"
     printf '%s' "$tail_content" \
-        | grep -qE "[Yy]ou[']ve hit your limit|[Ll]imit reached[[:space:]]+[·∙(]"
+        | grep -qE "[Yy]ou[']ve hit your( session)? limit|[Ll]imit reached[[:space:]]+[·∙(]"
 }
 
 # has_server_rate_limit_error <tail_content>
